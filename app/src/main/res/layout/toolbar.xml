@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fourty_eight_dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/app_name"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/eighteen_dp"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:layout_gravity="center"
+        android:id="@+id/toolbar_title" />
+</android.support.v7.widget.Toolbar>

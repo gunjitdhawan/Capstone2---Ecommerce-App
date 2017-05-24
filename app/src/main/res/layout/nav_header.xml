@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/twenty_dp"
+    android:paddingBottom="@dimen/eighteen_dp"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/two_hundred_dp">
+
+    <ImageView
+        android:src="@drawable/ic_launcher"
+        android:layout_width="@dimen/fourty_eight_dp"
+        android:layout_marginTop="@dimen/twelve_dp"
+        android:id="@+id/drawer_user_img"
+        android:layout_gravity="center"
+        android:layout_height="@dimen/fourty_eight_dp" />
+    <TextView
+        android:id="@+id/drawer_user_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty_three_dp"
+        android:text="@string/user_name"
+        android:layout_marginTop="@dimen/twelve_dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/drawer_user_desc"
+        android:textColor="@color/white"
+        android:textSize="@dimen/eighteen_dp"
+        android:layout_marginTop="@dimen/eight_dp"
+        android:text="@string/user_email"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/four_dp"
+        android:layout_marginTop="@dimen/eight_dp"
+        android:visibility="gone"
+        android:id="@+id/drawer_edit_profile_btn"
+        android:text="@string/edit_profile"/>
+</LinearLayout>

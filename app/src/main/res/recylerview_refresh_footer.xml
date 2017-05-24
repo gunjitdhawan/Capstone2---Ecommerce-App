@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/footerView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.gs.apputil.ui.view.TextViewProximaNovaSemiBold
+        android:id="@+id/loadMoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/fourty_eight_dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/load_more_color"
+        android:text="Load More.."
+        android:gravity="center"
+        android:textSize="@dimen/sixteen_dp" />
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/footerLoadingBar"
+        android:layout_width="24dp"
+        android:layout_margin="@dimen/twelve_dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress"
+
+        />
+</RelativeLayout>

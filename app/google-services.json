@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1000378684872",
+    "firebase_url": "https://ecommerce-12811.firebaseio.com",
+    "project_id": "ecommerce-12811",
+    "storage_bucket": "ecommerce-12811.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000378684872:android:b88897f716950ee3",
+        "android_client_info": {
+          "package_name": "in.grappes.ecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000378684872-4v8btbqds9ejcl72llq16elfacl2lh90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTy1TaXoMH6YhPIugC5rHVgEjLFiJA3yg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

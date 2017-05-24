@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_coupon_code"
+        android:id="@+id/coupon_code_et"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/coupon_code_et"
+        android:id="@+id/apply_btn"
+        android:padding="@dimen/twelve_dp"
+        android:text="@string/apply"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/apply_btn"
+        android:id="@+id/cancel_btn"
+        android:padding="@dimen/twelve_dp"
+        android:layout_below="@+id/coupon_code_et"
+        android:text="@string/cancel"/>
+
+</RelativeLayout>

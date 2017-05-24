@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+                android:background="@color/divider_dark"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_eighty_dp"
+        android:id="@+id/homeViewPager"/>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fourty_eight_dp"
+        android:layout_alignBottom="@+id/homeViewPager"/>
+
+</RelativeLayout>

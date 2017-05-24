@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_marginTop="@dimen/twelve_dp"
+              android:layout_width="match_parent"
+
+                android:background="@color/white"
+              android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/fourty_eight_dp"
+        android:layout_height="@dimen/fourty_eight_dp"
+        android:scaleType="centerInside"
+        android:id="@+id/product_image"
+        android:layout_margin="@dimen/twelve_dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/dgts__login_header"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/eighteen_dp"
+        android:paddingLeft="@dimen/twelve_dp"
+        android:paddingTop="@dimen/twelve_dp"
+        android:layout_toLeftOf="@+id/product_image"
+        android:id="@+id/product_name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/twelve_dp"
+        android:paddingBottom="@dimen/twelve_dp"
+        android:textSize="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/four_dp"
+        android:layout_below="@+id/product_name"
+        android:layout_toLeftOf="@+id/product_image"
+        android:id="@+id/product_price"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/half_dp"
+        android:layout_below="@+id/product_price"
+        android:id="@+id/divider"
+        android:background="@color/divider_dark"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/div_1"
+            android:gravity="center"
+            android:padding="@dimen/twelve_dp"
+            android:id="@+id/change_quantity_btn"
+            android:text="@string/change_quantity"/>
+
+        <View
+            android:layout_width="@dimen/half_dp"
+            android:layout_height="@dimen/fourty_four_dp"
+            android:background="@color/divider_dark"
+            android:id="@+id/div_1"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/div_1"
+            android:padding="@dimen/twelve_dp"
+            android:id="@+id/remove_btn"
+            android:gravity="center"
+            android:text="@string/remove"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

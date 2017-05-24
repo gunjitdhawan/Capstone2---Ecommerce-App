@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.grappes.ecommerce.ui.activities.LocationDetectionActivity">
+
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/banner_image"/>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/start_typing"
+        android:id="@+id/location_edit_text"
+        android:padding="@dimen/twelve_dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fourteen_dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/use_gps"
+        android:id="@+id/use_gps_btn"
+        android:layout_marginTop="@dimen/sixteen_dp"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fourteen_dp"
+        android:background="@color/colorAccent"
+        android:text="@string/proceed"
+        android:id="@+id/proceed_btn"
+        android:layout_marginTop="@dimen/sixteen_dp"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
