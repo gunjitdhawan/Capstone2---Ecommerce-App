@@ -63,7 +63,7 @@ public class LocationDetectionActivity extends AppCompatActivity implements Goog
         setViews();
 
         ToolbarUtils.setToolbar((ViewGroup) ((ViewGroup) this
-                .findViewById(android.R.id.content)), LocationDetectionActivity.this, "SELECT LOCATION");
+                .findViewById(android.R.id.content)), LocationDetectionActivity.this, getResources().getString(R.string.location));
 
         setupGoogleAPIClient();
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -119,7 +119,7 @@ public class LocationDetectionActivity extends AppCompatActivity implements Goog
                 }
                 else
                 {
-                    Toast.makeText(LocationDetectionActivity.this, "Please enter a location", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LocationDetectionActivity.this, getResources().getString(R.string.enter_location), Toast.LENGTH_SHORT).show();
                 }
             }
         });

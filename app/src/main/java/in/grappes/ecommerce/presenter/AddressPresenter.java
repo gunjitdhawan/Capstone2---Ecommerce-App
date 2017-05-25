@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+import in.grappes.ecommerce.R;
 import in.grappes.ecommerce.model.AddressTo;
 
 /**
@@ -90,7 +91,7 @@ public class AddressPresenter {
                     getUserAddressesInterface.onAddAddressFailure(databaseError.getMessage());
                     return;
                 }
-                getUserAddressesInterface.onAddAddressFailure("Something went wrong. Please try again!");
+                getUserAddressesInterface.onAddAddressFailure(context.getResources().getString(R.string.somethingwentwrong));
             }
         });
     }

@@ -239,7 +239,7 @@ public class AddressActivity extends AppCompatActivity implements Validator.Vali
     public void showProgressBar()
     {
         try {
-            pDialog.setTitleText("Loading");
+            pDialog.setTitleText(getResources().getString(R.string.loading));
             pDialog.setCancelable(false);
             pDialog.show();
         }

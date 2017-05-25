@@ -31,7 +31,7 @@ public class CartActivity extends AppCompatActivity implements Cart.CartUpdateLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
         ToolbarUtils.setToolbar((ViewGroup) ((ViewGroup) this
-                .findViewById(android.R.id.content)), CartActivity.this, "MY CART");
+                .findViewById(android.R.id.content)), CartActivity.this, getResources().getString(R.string.my_cart));
 
         setViews();
         initViews();
@@ -53,7 +53,7 @@ public class CartActivity extends AppCompatActivity implements Cart.CartUpdateLi
             public void onClick(View view) {
                 if(Cart.getInstance(CartActivity.this).getSubtotal()<1)
                 {
-                    Toast.makeText(CartActivity.this, "Add something to cart first!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CartActivity.this, getResources().getString(R.string.add_something), Toast.LENGTH_SHORT).show();
                 }
                 else
                 {

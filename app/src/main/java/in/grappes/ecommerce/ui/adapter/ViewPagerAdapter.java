@@ -53,7 +53,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, final int position) {
         View itemView = mLayoutInflater.inflate(R.layout.pager_item, container, false);
         progressDialog = new ProgressDialog(mContext);
-        progressDialog.setMessage("Please wait...");
+        progressDialog.setMessage(mContext.getResources().getString(R.string.wait));
         ImageView imageView = (ImageView) itemView.findViewById(R.id.imageView);
         Glide.with(mContext).load(pagerToArrayList.get(position).imageUrl).into(imageView);
         imageView.setOnClickListener(new View.OnClickListener() {

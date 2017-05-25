@@ -51,7 +51,7 @@ public class ProductDetailActivity extends AppCompatActivity implements Cart.Car
         getIntentData();
 
         ToolbarUtils.setToolbar((ViewGroup) ((ViewGroup) this
-                .findViewById(android.R.id.content)), ProductDetailActivity.this, "PRODUCT DETAIL");
+                .findViewById(android.R.id.content)), ProductDetailActivity.this, getResources().getString(R.string.prduct_det));
         setViews();
         setupImageBanners();
         initViews();

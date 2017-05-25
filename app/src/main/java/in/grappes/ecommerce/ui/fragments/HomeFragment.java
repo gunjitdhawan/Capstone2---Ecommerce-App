@@ -75,8 +75,6 @@ public class HomeFragment extends Fragment {
             HomeFragment.this.homeDataTo = homeDataTo;
             setAdapter();
             setupRecyclerView();
-
-            homeAdapter.dealOfDayDataBinder.rcAdapter.performClick();
         }
 
         @Override

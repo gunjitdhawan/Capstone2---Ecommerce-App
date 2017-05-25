@@ -221,7 +221,7 @@ public class HomeActivity extends AppCompatActivity implements Cart.CartUpdateLi
                     case R.id.share_with_friends_btn:
                         Intent sendIntent = new Intent();
                         sendIntent.setAction(Intent.ACTION_SEND);
-                        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hey! Checkout my new E-commerce app :D");
+                        sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.share_text));
                         sendIntent.setType("text/plain");
                         startActivity(sendIntent);
                         break;

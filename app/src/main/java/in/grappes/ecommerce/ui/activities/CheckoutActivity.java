@@ -73,7 +73,7 @@ public class CheckoutActivity extends AppCompatActivity implements Cart.CartUpda
         placeOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressDialog.setMessage("Placing order...");
+                progressDialog.setMessage(getResources().getString(R.string.placing_order_toast));
                 progressDialog.show();
                 placeOrder();
             }
@@ -228,7 +228,7 @@ public class CheckoutActivity extends AppCompatActivity implements Cart.CartUpda
         //Create sequence of items
         final CharSequence[] quantityArray = quantityList.toArray(new String[quantityList.size()]);
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-        dialogBuilder.setTitle("Change Quantity");
+        dialogBuilder.setTitle(getResources().getString(R.string.change_quantity));
         dialogBuilder.setItems(quantityArray, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 String selectedText = quantityArray[item].toString();
@@ -271,7 +271,6 @@ public class CheckoutActivity extends AppCompatActivity implements Cart.CartUpda
         @Override
         public void onCouponAppliedSuccess(Coupon coupon) {
             progressDialog.dismiss();
-            Toast.makeText(CheckoutActivity.this, "Coupon Applied!", Toast.LENGTH_SHORT).show();
             Cart.getInstance(CheckoutActivity.this).applyPromoCode(coupon);
             couponAppliedText.setVisibility(View.VISIBLE);
             applyCouponCodeBtn.setVisibility(View.GONE);

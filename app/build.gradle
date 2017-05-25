@@ -20,7 +20,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("/Desktop/ecomkeystore.keystore")
+            storeFile file("../ecommercekeystore")
             storePassword "asdf1212"
             keyAlias "ecomalias"
             keyPassword "asdf1212"

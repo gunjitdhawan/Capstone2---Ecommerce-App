@@ -35,7 +35,7 @@ public class ProductListActivity extends AppCompatActivity {
 
         getIntentData();
         ToolbarUtils.setToolbar((ViewGroup) ((ViewGroup) this
-                .findViewById(android.R.id.content)), ProductListActivity.this, categoryName+" list");
+                .findViewById(android.R.id.content)), ProductListActivity.this, categoryName+getResources().getString(R.string.list));
         setViews();
         fetchProductList();
 
@@ -49,7 +49,7 @@ public class ProductListActivity extends AppCompatActivity {
 
     private void setViews() {
         loadingDialog = new ProgressDialog(ProductListActivity.this);
-        loadingDialog.setMessage("Loading...");
+        loadingDialog.setMessage(getResources().getString(R.string.loading));
     }
 
     private void fetchProductList() {
@@ -85,7 +85,7 @@ public class ProductListActivity extends AppCompatActivity {
         @Override
         public void OnGetProductDetailFailure(String errorMessage) {
             loadingDialog.dismiss();
-            Toast.makeText(ProductListActivity.this, "Couldn't fetch items. Please try again", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ProductListActivity.this, getResources().getString(R.string.couldnt_fetch), Toast.LENGTH_SHORT).show();
         }
     };
 }

@@ -162,7 +162,7 @@ public class SignupActivity extends AppCompatActivity implements Validator.Valid
 
         AuthConfig.Builder authConfigBuilder = new AuthConfig.Builder()
                 .withAuthCallBack(authCallback)
-                .withPhoneNumber("+91"+mobileNumber.getText().toString());
+                .withPhoneNumber(getResources().getString(R.string.phoncode)+mobileNumber.getText().toString());
 
         Digits.authenticate(authConfigBuilder.build());
     }
@@ -282,7 +282,7 @@ public class SignupActivity extends AppCompatActivity implements Validator.Valid
     {
         try {
 
-            pDialog.setTitleText("Loading");
+            pDialog.setTitleText(getResources().getString(R.string.loading));
             pDialog.setCancelable(false);
             pDialog.show();
         }

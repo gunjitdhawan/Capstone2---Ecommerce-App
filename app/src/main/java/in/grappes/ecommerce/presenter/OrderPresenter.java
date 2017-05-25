@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+import in.grappes.ecommerce.R;
 import in.grappes.ecommerce.model.Coupon;
 import in.grappes.ecommerce.model.OrderTo;
 
@@ -62,7 +63,7 @@ public class OrderPresenter {
                     fetchAllOrdersInterface.onFetchOrderFailed(databaseError.getMessage());
                     return;
                 }
-                fetchAllOrdersInterface.onFetchOrderFailed("Something went wrong. Please try again!");
+                fetchAllOrdersInterface.onFetchOrderFailed(context.getResources().getString(R.string.somethingwentwrong));
             }
         });
     }
@@ -128,7 +129,7 @@ public class OrderPresenter {
                     if (coupon != null) {
                         applyCouponInterface.onCouponAppliedSuccess(coupon);
                     } else {
-                        applyCouponInterface.onCouponAppliedFailure("Incorrect Coupon Code");
+                        applyCouponInterface.onCouponAppliedFailure(context.getResources().getString(R.string.invalid_coupon));
                     }
                     break;
                 }

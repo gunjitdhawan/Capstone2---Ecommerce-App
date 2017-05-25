@@ -10,6 +10,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import in.grappes.ecommerce.R;
 import in.grappes.ecommerce.model.User;
 
 /**
@@ -71,7 +72,7 @@ public class UserPresenter {
                     if (user != null && user.password.equals(password)) {
                         loginInterface.onLoginSuccess(user);
                     } else {
-                        loginInterface.onLoginFailed("Incorrect combination");
+                        loginInterface.onLoginFailed(context.getResources().getString(R.string.invalid_combination));
                     }
                     break;
                 }
