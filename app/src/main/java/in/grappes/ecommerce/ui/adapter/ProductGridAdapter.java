@@ -43,7 +43,7 @@ public class ProductGridAdapter extends RecyclerView.Adapter<ProductGridAdapter.
         final Product currentProduct = products.get(position);
         Log.e("ImageLink", currentProduct.productImageLink);
         Glide.with(context).load(currentProduct.productImageLink).into(holder.productImage);
-        holder.productPrice.setText("Rs."+currentProduct.sellingPrice);
+        holder.productPrice.setText(context.getResources().getString(R.string.rs, String.valueOf(currentProduct.sellingPrice)));
         holder.productName.setText(currentProduct.productName+"\n"+currentProduct.shortDescription);
         holder.root.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +62,10 @@ public class ProductGridAdapter extends RecyclerView.Adapter<ProductGridAdapter.
     @Override
     public int getItemCount() {
         return products.size();
+
+    }
+
+    public void performClick() {
 
     }
 

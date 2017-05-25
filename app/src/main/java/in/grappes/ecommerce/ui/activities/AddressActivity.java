@@ -68,7 +68,7 @@ public class AddressActivity extends AppCompatActivity implements Validator.Vali
         pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        toolbarTitle.setText("Select an address");
+        toolbarTitle.setText(getResources().getString(R.string.address_1));
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

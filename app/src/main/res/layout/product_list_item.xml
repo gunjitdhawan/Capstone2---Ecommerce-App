@@ -10,6 +10,7 @@
         android:id="@+id/product_image"
         android:layout_height="@dimen/two_hundred_dp"
         android:scaleType="fitXY"
+        android:contentDescription="@string/product_image"
         android:background="@color/colorPrimary"
         />
 
@@ -20,8 +21,10 @@
         android:textSize="@dimen/eighteen_dp"
         android:paddingTop="@dimen/twelve_dp"
         android:paddingRight="@dimen/twelve_dp"
-        android:paddingLeft="@dimen/twelve_dp"
-        android:id="@+id/product_name"/>
+        android:paddingEnd="@dimen/twelve_dp"
+        android:paddingStart="@dimen/twelve_dp"
+        android:id="@+id/product_name"
+        android:paddingLeft="@dimen/twelve_dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -29,12 +32,14 @@
         android:maxLines="1"
         android:paddingTop="@dimen/twelve_dp"
         android:paddingBottom="@dimen/twelve_dp"
-        android:paddingLeft="@dimen/twelve_dp"
+        android:paddingStart="@dimen/twelve_dp"
         android:paddingRight="@dimen/twelve_dp"
+        android:paddingEnd="@dimen/twelve_dp"
         android:textSize="@dimen/twenty_dp"
         android:textStyle="bold"
         android:textColor="@color/red_btn_bg_color"
-        android:id="@+id/product_price"/>
+        android:id="@+id/product_price"
+        android:paddingLeft="@dimen/twelve_dp"/>
 
 
 

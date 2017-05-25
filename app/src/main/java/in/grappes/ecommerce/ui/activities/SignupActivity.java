@@ -89,7 +89,7 @@ public class SignupActivity extends AppCompatActivity implements Validator.Valid
         pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-        toolbarTitle.setText("Sign up");
+        toolbarTitle.setText(getResources().getString(R.string.signup));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent i = getIntent();

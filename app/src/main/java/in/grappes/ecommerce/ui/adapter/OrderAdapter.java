@@ -38,10 +38,10 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(OrderAdapter.ViewHolder holder, int position) {
         OrderTo orderTo = orderList.get(position);
-        holder.orderNumber.setText("Order #"+orderTo.orderPlacingTime);
-        holder.orderStatus.setText(""+orderTo.orderStatus);
+        holder.orderNumber.setText(context.getResources().getString(R.string.order_number, String.valueOf(orderTo.orderPlacingTime)));
+        holder.orderStatus.setText(orderTo.orderStatus);
         holder.orderDate.setText(AppUtils.convertDate(orderTo.orderPlacingTime, "E, MMM d, yyyy"));
-        holder.orderInfo.setText("Rs."+orderTo.finalTotal+" | "+orderTo.products.size()+" items");
+        holder.orderInfo.setText(context.getResources().getString(R.string.order_info,orderTo.finalTotal+" | "+orderTo.products.size()));
     }
 
     @Override

@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/two_hundred_dp"
             android:gravity="center"
+            android:contentDescription="@string/popular_product_image"
             android:scaleType="centerInside"
             android:src="@drawable/indian_food_platter"
             />

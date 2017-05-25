@@ -71,4 +71,26 @@
     <string name="share">Share with Friends</string>
     <string name="my_orders">My Orders</string>
     <string name="home">Home</string>
+    <string name="banner_image">This is banner</string>
+    <string name="category_image">This is Category Image</string>
+    <string name="product_image">This is product image</string>
+    <string name="user_detail">This is user image</string>
+    <string name="pager_item">This is pager Image</string>
+    <string name="cart_image">This is Cart Image</string>
+    <string name="popular_product_image">This is popular product image</string>
+    <string name="order_items">Order Items</string>
+    <string name="buy_now">BUY NOW</string>
+    <string name="call_us">CALL US</string>
+    <string name="address_1">Select an address</string>
+    <string name="subtotal_text">Sub total : Rs.</string>
+    <string name="product_colon">Product :</string>
+    <string name="price_colon">Price : Rs.</string>
+    <string name="applying_coupon">Applying coupon...</string>
+    <string name="change_quantity_1">CHANGE QUANTITY(%1$s)</string>
+    <string name="placing_order">Placing order...</string>
+    <string name="login_signup">Login/Signup</string>
+    <string name="to_view_this">to view to this info</string>
+    <string name="order_number">Order #%1$s</string>
+    <string name="order_info">\"Rs.%1$s items\"</string>
+    <string name="rs">Rs.%1$s</string>
 </resources>

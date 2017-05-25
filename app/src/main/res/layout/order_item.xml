@@ -12,8 +12,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/twelve_dp"
-        android:paddingRight="@dimen/twelve_dp">
+        android:paddingStart="@dimen/twelve_dp"
+        android:paddingRight="@dimen/twelve_dp"
+        android:paddingEnd="@dimen/twelve_dp"
+        android:paddingLeft="@dimen/twelve_dp">
+
 
 
         <TextView
@@ -29,8 +32,9 @@
             android:layout_height="wrap_content"
             android:textColor="@color/text_med"
             android:textSize="@dimen/fifteen_dp"
-            android:layout_marginLeft="@dimen/eight_dp"
-            android:id="@+id/order_number"/>
+            android:layout_marginStart="@dimen/eight_dp"
+            android:id="@+id/order_number"
+            android:layout_marginLeft="@dimen/eight_dp"/>
 
     </LinearLayout>
 
@@ -41,8 +45,10 @@
         android:id="@+id/order_placing_date"
         android:layout_marginTop="@dimen/four_dp"
         android:textSize="@dimen/thirteen_dp"
-        android:paddingLeft="@dimen/twelve_dp"
-        android:paddingRight="@dimen/twelve_dp"/>
+        android:paddingStart="@dimen/twelve_dp"
+        android:paddingRight="@dimen/twelve_dp"
+        android:paddingEnd="@dimen/twelve_dp"
+        android:paddingLeft="@dimen/twelve_dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -51,9 +57,11 @@
         android:id="@+id/order_mini_info"
         android:layout_marginTop="@dimen/four_dp"
         android:textSize="@dimen/thirteen_dp"
-        android:paddingLeft="@dimen/twelve_dp"
+        android:paddingStart="@dimen/twelve_dp"
         android:paddingRight="@dimen/twelve_dp"
-        android:paddingBottom="@dimen/twelve_dp"/>
+        android:paddingEnd="@dimen/twelve_dp"
+        android:paddingBottom="@dimen/twelve_dp"
+        android:paddingLeft="@dimen/twelve_dp"/>
 
     <TextView
         android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 package in.grappes.ecommerce.ui.activities;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -172,7 +173,7 @@ public class CheckoutActivity extends AppCompatActivity implements Cart.CartUpda
     }
 
     private void checkIfCouponCodeCorrect(String couponCode) {
-        progressDialog.setMessage("Applying coupon...");
+        progressDialog.setMessage(CheckoutActivity.this.getResources().getString(R.string.applying_coupon));
         progressDialog.show();
         new OrderPresenter(CheckoutActivity.this, applyCouponInterface).applyCoupon(couponCode);
     }
@@ -188,6 +189,7 @@ public class CheckoutActivity extends AppCompatActivity implements Cart.CartUpda
         });
     }
 
+    @SuppressLint("StringFormatMatches")
     private void setOrderItemsView() {
         orderItemLayout.removeAllViews();
         for (final Map.Entry<Product, Integer> entry : Cart.getInstance(CheckoutActivity.this).cartItems.entrySet())
@@ -197,7 +199,7 @@ public class CheckoutActivity extends AppCompatActivity implements Cart.CartUpda
             ((TextView)view.findViewById(R.id.product_price)).setText(""+entry.getKey().sellingPrice);
             ImageView productImage = ((ImageView)view.findViewById(R.id.product_image));
             final TextView changeQtyBtn = (TextView) view.findViewById(R.id.change_quantity_btn);
-            changeQtyBtn.setText("CHANGE QUANTITY("+entry.getValue()+")");
+            changeQtyBtn.setText(getResources().getString(R.string.change_quantity_1, String.valueOf(entry.getValue())));
             view.findViewById(R.id.remove_btn).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -230,7 +232,7 @@ public class CheckoutActivity extends AppCompatActivity implements Cart.CartUpda
         dialogBuilder.setItems(quantityArray, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
                 String selectedText = quantityArray[item].toString();
-                changeQtyBtn.setText("CHANGE QUANTITY("+selectedText+")");
+                changeQtyBtn.setText(getResources().getString(R.string.change_quantity_1, selectedText));
                 Cart.getInstance(CheckoutActivity.this).updateQuantityOfProductInCart(product, Integer.parseInt(selectedText));
                 setOrderSummaryLayout();
             }
@@ -243,7 +245,7 @@ public class CheckoutActivity extends AppCompatActivity implements Cart.CartUpda
 
     private void setViews() {
         progressDialog = new ProgressDialog(CheckoutActivity.this);
-        progressDialog.setMessage("Placing order...");
+        progressDialog.setMessage(getResources().getString(R.string.placing_order));
         orderItemLayout = (LinearLayout) findViewById(R.id.order_summary_layout);
         orderAddressLayout = findViewById(R.id.order_address_layout);
         orderAddress = (TextView) findViewById(R.id.order_address);

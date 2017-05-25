@@ -41,7 +41,7 @@ public class CartActivity extends AppCompatActivity implements Cart.CartUpdateLi
     }
 
     private void initViews() {
-        subtotalTv.setText("Sub total : Rs."+Cart.getInstance(this).getSubtotal());
+        subtotalTv.setText(getResources().getString(R.string.subtotal_text)+""+Cart.getInstance(this).getSubtotal());
     }
 
     private void setViews() {

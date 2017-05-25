@@ -12,6 +12,7 @@
           android:padding="@dimen/twelve_dp"
           android:layout_weight="1"
           android:layout_marginRight="@dimen/twelve_dp"
+          android:layout_marginEnd="@dimen/twelve_dp"
           android:background="@drawable/rounded_rect_solid"
           android:layout_height="wrap_content">
 
@@ -22,6 +23,7 @@
             android:layout_gravity="center"
             android:id="@+id/cat_img"
             android:visibility="gone"
+            android:contentDescription="@string/category_image"
             android:src="@android:drawable/ic_menu_camera"/>
 
         <TextView

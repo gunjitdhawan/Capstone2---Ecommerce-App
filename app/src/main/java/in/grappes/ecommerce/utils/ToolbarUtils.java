@@ -29,7 +29,7 @@ public class ToolbarUtils {
                 }
             });
         }
-        toolbarTitle.setText(""+title);
+        toolbarTitle.setText(title);
         context.setSupportActionBar(toolbar);
         context.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

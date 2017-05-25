@@ -60,9 +60,12 @@ public class ProductDetailActivity extends AppCompatActivity implements Cart.Car
 
 
     private void getIntentData() {
-        product = getIntent().getExtras().getParcelable("product");
-        pagerList = product.imageLinkArray;
-        pagerList.add(0, product.productImageLink);
+        if(getIntent().getExtras()!=null)
+        {
+            product = getIntent().getExtras().getParcelable("product");
+            pagerList = product.imageLinkArray;
+            pagerList.add(0, product.productImageLink);
+        }
     }
 
     private void initViews() {

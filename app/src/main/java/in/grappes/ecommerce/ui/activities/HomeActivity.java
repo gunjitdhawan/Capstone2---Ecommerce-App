@@ -46,6 +46,7 @@ public class HomeActivity extends AppCompatActivity implements Cart.CartUpdateLi
     TextView userNameView;
     TextView userDescView;
     boolean openMyOrders = false;
+    public boolean openPopularProduct = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,7 @@ public class HomeActivity extends AppCompatActivity implements Cart.CartUpdateLi
         if(getIntent()!=null && getIntent().getExtras()!=null)
         {
             openMyOrders = getIntent().getExtras().getBoolean("openMyOrders");
+            openPopularProduct = getIntent().getExtras().getBoolean("openPopularProduct");
         }
     }
 
@@ -200,7 +202,7 @@ public class HomeActivity extends AppCompatActivity implements Cart.CartUpdateLi
                             Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                             intent.putExtra("destination", "myOrders");
                             startActivityForResult(intent, AppConstants.LOGIN);
-                            drawerLayout.closeDrawer(Gravity.LEFT);
+                            drawerLayout.closeDrawer(Gravity.START);
                             break;
                         }
 
@@ -277,13 +279,13 @@ public class HomeActivity extends AppCompatActivity implements Cart.CartUpdateLi
 
         if(SharedPrefUtils.getCurrentUser(HomeActivity.this)==null)
         {
-            userNameView.setText("Login/Signup");
-            userDescView.setText("to view to this info");
+            userNameView.setText(getResources().getString(R.string.login_signup));
+            userDescView.setText(getResources().getString(R.string.to_view_this));
         }
         else
         {
-            userNameView.setText(""+SharedPrefUtils.getCurrentUser(HomeActivity.this).firstName);
-            userDescView.setText(""+SharedPrefUtils.getCurrentUser(HomeActivity.this).email);
+            userNameView.setText(SharedPrefUtils.getCurrentUser(HomeActivity.this).firstName);
+            userDescView.setText(SharedPrefUtils.getCurrentUser(HomeActivity.this).email);
         }
 
         userNameView.setOnClickListener(new View.OnClickListener() {
@@ -325,7 +327,7 @@ public class HomeActivity extends AppCompatActivity implements Cart.CartUpdateLi
             Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
             intent.putExtra("destination", "home");
             startActivityForResult(intent, AppConstants.LOGIN);
-            drawerLayout.closeDrawer(Gravity.LEFT);
+            drawerLayout.closeDrawer(Gravity.START);
         }
     }
 
@@ -387,8 +389,8 @@ public class HomeActivity extends AppCompatActivity implements Cart.CartUpdateLi
     protected void onStart() {
         super.onStart();
         if (SharedPrefUtils.getCurrentUser(HomeActivity.this) != null) {
-            userNameView.setText("" + SharedPrefUtils.getCurrentUser(HomeActivity.this).firstName);
-            userDescView.setText("" + SharedPrefUtils.getCurrentUser(HomeActivity.this).email);
+            userNameView.setText(SharedPrefUtils.getCurrentUser(HomeActivity.this).firstName);
+            userDescView.setText(SharedPrefUtils.getCurrentUser(HomeActivity.this).email);
         }
     }
 }

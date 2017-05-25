@@ -17,6 +17,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    signingConfigs {
+        release {
+            storeFile file("/Desktop/ecomkeystore.keystore")
+            storePassword "asdf1212"
+            keyAlias "ecomalias"
+            keyPassword "asdf1212"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
 }
 
 

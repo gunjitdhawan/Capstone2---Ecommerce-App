@@ -51,8 +51,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> im
             final Product product = products.get(position);
             Integer quantity = quantities.get(position);
 
-            holder.dishName.setText("Product : "+ product.productName);
-            holder.dishPrice.setText("Price : Rs."+product.sellingPrice);
+            holder.dishName.setText(context.getString(R.string.product_colon)+ product.productName);
+            holder.dishPrice.setText(context.getString(R.string.price_colon)+product.sellingPrice);
             holder.quantity.setText(""+quantity);
 
             holder.quantityMinus.setOnClickListener(new View.OnClickListener() {

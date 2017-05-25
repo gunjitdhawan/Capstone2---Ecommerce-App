@@ -12,7 +12,7 @@ import android.content.Intent;
 import android.widget.RemoteViews;
 
 import in.grappes.ecommerce.R;
-import in.grappes.ecommerce.ui.activities.ProductDetailActivity;
+import in.grappes.ecommerce.ui.activities.HomeActivity;
 
 public class WidgetProvider extends AppWidgetProvider {
 
@@ -34,7 +34,8 @@ public class WidgetProvider extends AppWidgetProvider {
                                  int appWidgetId) {
 
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_provider_layout);
-        Intent intent = new Intent(context, ProductDetailActivity.class);
+        Intent intent = new Intent(context, HomeActivity.class);
+        intent.putExtra("openPopularProduct", true);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
         views.setOnClickPendingIntent(R.id.widgetImgLauncher, pendingIntent);
         appWidgetManager.updateAppWidget(appWidgetId, views);

@@ -75,7 +75,10 @@ public class LocationDetectionActivity extends AppCompatActivity implements Goog
 //                Map<String, String> post = (HashMap<String, String>) dataSnapshot.getValue(Map.class);
 
                 Map<String, String> localities = new Gson().fromJson(new Gson().toJson(dataSnapshot.getValue()), HashMap.class);
-                ArrayList<String> list = new ArrayList<String>(localities.values());
+                ArrayList<String> list = new ArrayList<String>();
+                if(localities!=null) {
+                    list.addAll(localities.values());
+                }
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(LocationDetectionActivity.this,android.R.layout.select_dialog_singlechoice, list);
                 //Find TextView control
                 //Set the number of characters the user must type before the drop down list is shown

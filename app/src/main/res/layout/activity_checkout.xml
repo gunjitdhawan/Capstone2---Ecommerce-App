@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Order Items"
+                android:text="@string/order_items"
                 android:background="@color/white"
                 android:textColor="@color/text_dark"
                 android:textSize="@dimen/sixteen_dp"
@@ -70,14 +70,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:text="@string/change"
                     android:id="@+id/order_address_change_btn"
                     android:textStyle="italic"
                     android:visibility="gone"
                     android:textColor="@color/text_med"
                     android:textSize="@dimen/eleven_dp"
-                    android:padding="@dimen/twelve_dp"/>
+                    android:padding="@dimen/twelve_dp"
+                    android:layout_alignParentRight="true"/>
 
             </RelativeLayout>
 
@@ -151,7 +152,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="4"
                         android:textSize="@dimen/fifteen_dp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:id="@+id/order_subtotal"
                         android:textColor="@color/text_dark"
                         />
@@ -187,7 +188,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="4"
                         android:textSize="@dimen/fifteen_dp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:id="@+id/order_discount"
                         android:textColor="@color/text_dark"
                         />
@@ -223,7 +224,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="4"
                         android:textSize="@dimen/fifteen_dp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:id="@+id/order_delivery_charges"
                         android:textColor="@color/text_dark"
                         />
@@ -259,7 +260,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="4"
                         android:textSize="@dimen/fifteen_dp"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:id="@+id/order_total"
                         android:textColor="@color/text_dark"
                         />

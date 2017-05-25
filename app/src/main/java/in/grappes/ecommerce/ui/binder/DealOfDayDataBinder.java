@@ -22,6 +22,7 @@ public class DealOfDayDataBinder extends DataBinder<DealOfDayDataBinder.ViewHold
     ArrayList<Product> products = new ArrayList<>();
     Context context;
     private GridLayoutManager glm;
+    public ProductGridAdapter rcAdapter;
 
     public DealOfDayDataBinder(DataBindAdapter dataBindAdapter, Context context, ArrayList<Product> products) {
         super(dataBindAdapter);
@@ -55,7 +56,7 @@ public class DealOfDayDataBinder extends DataBinder<DealOfDayDataBinder.ViewHold
         holder.rView.setHasFixedSize(true);
         holder.rView.setLayoutManager(glm);
 
-        ProductGridAdapter rcAdapter = new ProductGridAdapter(context, products);
+        rcAdapter = new ProductGridAdapter(context, products);
         holder.rView.setAdapter(rcAdapter);
     }
 }

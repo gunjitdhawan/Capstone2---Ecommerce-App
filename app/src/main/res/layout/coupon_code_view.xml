@@ -15,19 +15,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/coupon_code_et"
         android:id="@+id/apply_btn"
         android:padding="@dimen/twelve_dp"
-        android:text="@string/apply"/>
+        android:text="@string/apply"
+        android:layout_alignParentRight="true"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/apply_btn"
+        android:layout_toStartOf="@+id/apply_btn"
         android:id="@+id/cancel_btn"
         android:padding="@dimen/twelve_dp"
         android:layout_below="@+id/coupon_code_et"
-        android:text="@string/cancel"/>
+        android:text="@string/cancel"
+        android:layout_toLeftOf="@+id/apply_btn"/>
 
 </RelativeLayout>

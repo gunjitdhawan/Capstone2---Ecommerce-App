@@ -38,8 +38,6 @@ public class HomeFragment extends Fragment {
         context = getActivity();
         setViews(view);
         initViews();
-
-
         getHomeScreenData();
 
         return view;
@@ -77,6 +75,8 @@ public class HomeFragment extends Fragment {
             HomeFragment.this.homeDataTo = homeDataTo;
             setAdapter();
             setupRecyclerView();
+
+            homeAdapter.dealOfDayDataBinder.rcAdapter.performClick();
         }
 
         @Override
